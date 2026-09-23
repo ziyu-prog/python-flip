@@ -17,7 +17,8 @@ def flip_image(image_path):
     plt.title("Flipped Image")
     plt.imshow(flipped_img)
     plt.axis('off')
-    plt.show()
+    plt.savefig('result.jpg')
+    print("图片已保存为 result.jpg")
     return flipped_img
 
 if __name__ == "__main__":

@@ -18,6 +18,7 @@ def flip_image(image_path):
     plt.imshow(flipped_img)
     plt.axis('off')
     plt.savefig('result.jpg')
+    plt.show()                            # 在屏幕中同时显示原图与翻转图
     print("图片已保存为 result.jpg")
     return flipped_img
 

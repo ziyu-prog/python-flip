@@ -8,10 +8,17 @@ def flip_image(image_path):
         return
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     flipped_img = cv2.flip(img_rgb, 1)   # 1 表示水平（左右）翻转
-    plt.figure()
+    plt.figure(figsize=(10, 5))
+    plt.subplot(1, 2, 1)
+    plt.title("Original Image")
+    plt.imshow(img_rgb)
+    plt.axis('off')
+    plt.subplot(1, 2, 2)
+    plt.title("Flipped Image")
     plt.imshow(flipped_img)
     plt.axis('off')
-    plt.show()
+    plt.savefig('result.jpg')
+    print("图片已保存为 result.jpg")
     return flipped_img
 
 if __name__ == "__main__":
